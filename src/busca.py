@@ -256,10 +256,11 @@ def n_depth(node):
 class BreadthFirstSearch(BestFirstSearch):
 
     def __init__(self, problem):
-        self.problem = problem
+        super().__init__(problem, None)
+        #self.problem = problem
         # frontier ← as a FIFO queue
         self.frontier = FIFOQueue() 
-        self.reached = {} # a lookup table, with one entry with key problem.INITIAL and value node
+        #self.reached = {} # a lookup table, with one entry with key problem.INITIAL and value node
     
     def f(self, node):
         node_depth = 0
